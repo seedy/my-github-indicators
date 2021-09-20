@@ -23,17 +23,24 @@ const ListItemRepository = forwardRef(({
 }, ref) => {
   const [selectVisible, setSelectVisible] = useState(false);
 
-  const onToggleVisible = useCallback(
+  const onMouseEnter = useCallback(
     () => {
-      setSelectVisible((prevVisible) => !prevVisible);
+      setSelectVisible(true);
+    },
+    [setSelectVisible],
+  );
+
+  const onMouseLeave = useCallback(
+    () => {
+      setSelectVisible(false);
     },
     [setSelectVisible],
   );
 
   return (
     <ListItem
-      onMouseEnter={onToggleVisible}
-      onMouseLeave={onToggleVisible}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       alignItems="flex-start"
       ref={ref}
       {...props}
@@ -73,6 +80,8 @@ const ListItemRepository = forwardRef(({
     </ListItem>
   );
 });
+
+ListItemRepository.displayName = ListItemRepository;
 
 ListItemRepository.propTypes = {
   fullName: PropTypes.string.isRequired,
