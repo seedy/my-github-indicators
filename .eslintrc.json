@@ -1,29 +1,8 @@
 {
-  "root": true,
   "extends": [
     "next/core-web-vitals",
-    "plugin:import/recommended",
     "airbnb",
-    "airbnb/hooks",
-    "plugin:json/recommended",
-    "plugin:clean-regex/recommended"
-  ],
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true,
-    "jest": true
-  },
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 7,
-    "sourceType": "module"
-  },
-  "plugins": [
-    "jest",
-    "react-hooks",
-    "clean-regex",
-    "json"
+    "airbnb/hooks"
   ],
   "settings": {
     "import/core-modules": [
@@ -80,27 +59,5 @@
     "react/react-in-jsx-scope": "off",
     "no-multiple-empty-lines": "off",
     "clean-regex/identity-escape": "off"
-  },
-  "overrides": [
-    {
-      "files": [
-        "**/test-utils/**/*.js",
-        "*.test.js",
-        "*.int-test.js"
-      ],
-      "rules": {
-        "import/named": "off",
-        "no-unused-expressions": "off"
-      }
-    },
-    {
-      "files": [
-        "**/*.md"
-      ],
-      "rules": {
-        "no-console": "off",
-        "no-unused-expressions": "off"
-      }
-    }
-  ]
+  }
 }
