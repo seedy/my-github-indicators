@@ -15,7 +15,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-
+          <meta name="description" content="Github Indicators Explorer can help you get key metrics about your favourite github repositories" />
         </Head>
         <body>
           <Main />
@@ -27,3 +27,4 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+
