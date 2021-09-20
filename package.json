@@ -17,6 +17,7 @@
     "@nivo/line": "^0.73.0",
     "@octokit/rest": "^18.10.0",
     "eslint-config-airbnb": "^18.2.1",
+    "lodash": "^4.17.21",
     "next": "11.1.2",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
