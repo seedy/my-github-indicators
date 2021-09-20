@@ -24,28 +24,38 @@ const ListItemRepository = ({ fullName, description, ownerAvatarUrl }) => {
     <ListItem
       onMouseEnter={onToggleVisible}
       onMouseLeave={onToggleVisible}
-      sx={{
-        '& .MuiListItemSecondaryAction-root': {
-          right: 48,
-        },
-      }}
+      alignItems="flex-start"
     >
-      <ListItemButton>
+      <ListItemButton
+        sx={{
+          border: 1,
+          borderColor: 'divider',
+          borderRadius: 2,
+        }}
+      >
         <ListItemAvatar>
           <Avatar alt={fullName} src={ownerAvatarUrl} />
         </ListItemAvatar>
         <ListItemText
           primary={fullName}
+          primaryTypographyProps={{
+            noWrap: true,
+          }}
           secondary={description}
+          secondaryTypographyProps={{
+            color: 'textSecondary',
+          }}
         />
-        {selectVisible && (
         <Button
           color="primary"
           size="small"
+          sx={{
+            opacity: selectVisible ? 1 : 0,
+            pointerEvents: 'none',
+          }}
         >
           Select
         </Button>
-        )}
       </ListItemButton>
     </ListItem>
   );
