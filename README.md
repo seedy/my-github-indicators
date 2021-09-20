@@ -18,17 +18,38 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Assignment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Requirements
 
-## Deploy on Vercel
+- Use GitHub API
+- Use Next.js
+- Use the design: https://www.sketch.com/s/058bf195-0462-428b-8af1-4a2936a1a2cf
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## User stories:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- As a user:
+  - I want to select a Github repository  
+  - I want to see a single chart showing both the number of collaborators and open issues over time about the selected repository.
+  - I want to be able to refresh the page without losing context (I should still see the same content)
+  
+  
+## Nice to have
+
+- Add more repository metrics being able to switch the selected ones
+- Add animations
+- Use React suspense or [SSR or SSG](https://nextjs.org/docs/basic-features/typescript#static-generation-and-server-side-rendering)
+- Proxify calls to GitHub API
+- Cache similar requests
+
+## Questions
+
+### Requirements
+
+- Why asking me to work with Next.js knowing that I never did before?
+- Why so few requirements regarding pure frontend work:
+  - no mention of responsive behaviour
+  - display a graph 
+- Why no advice on github API endpoints
