@@ -116,3 +116,10 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
   - **~10 hours** in total:
     - 5 hours manipulating Github API to render the graph
     - 5 hours for the rest
+
+  ## Overall feeling
+
+  - disappointment regarding the time I invested in this test: I wasted lots of time on stuff I never used before
+    - Github API
+    - NextJs
+  - I don't feel like I had the opportunity to show my skills
