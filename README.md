@@ -44,6 +44,59 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - Proxify calls to GitHub API
 - Cache similar requests
 
+# Presentation
+
+## App level
+
+### Search repositories
+
+- Display debounced search
+- Show url query param update when typing inside search
+- Show button behaviour inside list item
+- Font-family was not respected, to keep material-ui optimal integration with Roboto
+- Show loader when fetching repositories
+- Show fallback and SSR refresh
+- Show responsive
+
+### Repository stats
+
+- Show responsive
+- Show button behaviour to go back
+- Show graph
+
+### Sketch / Design
+
+- Theme colors
+- Font weight
+- Overall layout
+- mui
+
+## Code level
+
+### NextJs architecture
+
+- pages
+- SSR + dynamic data fetching
+
+### React
+
+- dumb vs smart components
+- helpers
+- hooks
+
+### API
+
+- octokit
+
+### Deps
+
+- eslint
+- nivo for graph rendering
+- octokit for Github API
+- lodash and ramda for built-in helpers
+- nextJs and swr for SSR and dynamic data fetching
+- material-ui for design, styling, base components
+
 ## Questions
 
 ### Requirements
@@ -51,5 +104,15 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - Why asking me to work with Next.js knowing that I never did before?
 - Why so few requirements regarding pure frontend work:
   - no mention of responsive behaviour
-  - display a graph 
+  - display a graph
+  - sketch was very simple, yet I was expected to follow it
 - Why no advice on github API endpoints
+  - It took me about thrice as much time to find how to fetch the data to display than implement it
+  - I didn't find as simple way to request data to display the graph
+
+
+  ## Time spent
+
+  - **~10 hours** in total:
+    - 5 hours manipulating Github API to render the graph
+    - 5 hours for the rest
