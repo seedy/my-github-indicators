@@ -24,7 +24,7 @@ const qProp = prop('q');
 // SSR
 export const getServerSideProps = async ({ query }) => {
   const { q = null } = query || {};
-  const repos = isNil(q) ? [] : await searchRepositories(q);
+  const repos = isNil(q) ? null : await searchRepositories(q);
   return {
     props: {
       q,
@@ -47,15 +47,15 @@ const Home = ({ q, repos }) => {
     [clientQuery, q],
   );
 
-  const { data, error } = useSWR(
+  const { data } = useSWR(
     clientQueryMatchesSsr ? null : clientQuery,
     searchRepositories,
     { fallbackData: repos },
   );
 
   const loading = useMemo(
-    () => !clientQueryMatchesSsr && data === repos && !isNil(clientQuery),
-    [clientQueryMatchesSsr, data, repos],
+    () => !clientQueryMatchesSsr && isNil(data) && !isNil(clientQuery),
+    [clientQueryMatchesSsr, data],
   );
 
   const defaultValue = useMemo(
@@ -150,7 +150,7 @@ const Home = ({ q, repos }) => {
                 />
                )}
             >
-              {data.map(({ id, fullName, description, owner }) => (
+              {!isNil(data) && data.map(({ id, fullName, description, owner }) => (
                 <ListItemRepository
                   key={id}
                   listItemButtonComponent={ListItemButtonLinkRepository}
@@ -176,7 +176,7 @@ Home.propTypes = {
 };
 
 Home.defaultProps = {
-  repos: [],
+  repos: null,
   q: '',
 };
 

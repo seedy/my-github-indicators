@@ -59,7 +59,7 @@ const ListItemRepository = forwardRef(({
         }}
       >
         <ListItemAvatar>
-          <Avatar alt={fullName} src={ownerAvatarUrl} />
+          <Avatar variant="rounded" alt={fullName} src={ownerAvatarUrl} />
         </ListItemAvatar>
         <ListItemText
           primary={fullName}

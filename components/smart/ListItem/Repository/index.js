@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
 import { forwardRef, useMemo } from 'react';
 
-import prop from 'helpers/prop';
+import propAvatarUrl from 'helpers/prop/avatarUrl';
 
 import DumbListItemRepository from 'components/dumb/ListItem/Repository';
-
-// HELPERS
-const avatarUrlProp = prop('avatarUrl');
 
 // COMPONENTS
 const ListItemRepository = forwardRef(({ owner, fullName, description, ...props }, ref) => {
   const ownerAvatarUrl = useMemo(
-    () => avatarUrlProp(owner),
+    () => propAvatarUrl(owner),
     [owner],
   );
   return (
