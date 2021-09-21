@@ -11,7 +11,7 @@ const CONFIG = {
     top: 50,
     right: 60,
     bottom: 50,
-    left: 60,
+    left: 40,
   },
   xScale: {
     type: 'time',
@@ -26,13 +26,29 @@ const CONFIG = {
   },
   axisBottom: {
     type: 'time',
-    format: '%B %Y',
-    tickValues: 'every month',
+    format: '%d %B %Y',
     tickSize: 10,
   },
   axisLeft: {
-
+    legend: 'Count',
+    legendOffset: -30,
+    legendPosition: 'middle',
   },
+  legends: [{
+    anchor: 'top-left',
+    direction: 'column',
+    justify: false,
+    translateX: 0,
+    translateY: -50,
+    itemsSpacing: 0,
+    itemDirection: 'left-to-right',
+    itemWidth: 80,
+    itemHeight: 20,
+    itemOpacity: 0.75,
+    symbolSize: 12,
+    symbolShape: 'circle',
+    symbolBorderColor: 'rgba(0, 0, 0, .5)',
+  }],
   enablePointLabel: true,
   useMesh: true,
 };
