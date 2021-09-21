@@ -7,23 +7,38 @@ import { ResponsiveLine } from '@nivo/line';
 
 // CONSTANTS
 const CONFIG = {
+  margin: {
+    top: 50,
+    right: 60,
+    bottom: 50,
+    left: 60,
+  },
   xScale: {
     type: 'time',
-    format: '%Y-%m-%d',
+    format: 'native',
     useUTC: false,
     precision: 'day',
   },
   xFormat: 'time:%Y-%m-%d',
   yScale: {
     type: 'linear',
-    stacked: true,
+    stacked: 'stacked',
   },
   axisBottom: {
-    format: '%Y-%m-%d',
+    type: 'time',
+    format: '%B %Y',
+    tickValues: 'every month',
+    tickSize: 10,
   },
+  axisLeft: {
+
+  },
+  enablePointLabel: true,
+  useMesh: true,
 };
 
 const NOW = new Date();
+
 
 // COMPONENTS
 const Graph = ({ openIssuesCount, closedDates, collaboratorsCount, memberDates }) => {
@@ -33,7 +48,7 @@ const Graph = ({ openIssuesCount, closedDates, collaboratorsCount, memberDates }
     () => [{ x: NOW, y: openIssuesCount }]
       .concat(closedDates.map((date, index) => ({
         x: new Date(date),
-        y: openIssuesCount - index,
+        y: openIssuesCount - (index + 1),
       }))),
     [openIssuesCount, closedDates],
   );
@@ -42,7 +57,7 @@ const Graph = ({ openIssuesCount, closedDates, collaboratorsCount, memberDates }
     () => [{ x: NOW, y: collaboratorsCount }]
       .concat(memberDates.map((date, index) => ({
         x: new Date(date),
-        y: collaboratorsCount - index,
+        y: collaboratorsCount - (index + 1),
       }))),
     [collaboratorsCount, memberDates],
   );

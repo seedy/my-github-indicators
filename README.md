@@ -86,13 +86,18 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ### API
 
-- octokit
+- octokit calls
+  - paginate to fetch all data
+
+### Dataviz
+
+- nivo
 
 ### Deps
 
-- eslint
-- nivo for graph rendering
-- octokit for Github API
+- eslint: some lint rules for code readability
+- nivo for graph rendering: can be used server-side
+- octokit for Github API: simplifies calls
 - lodash and ramda for built-in helpers
 - nextJs and swr for SSR and dynamic data fetching
 - material-ui for design, styling, base components
@@ -101,18 +106,24 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ### Requirements
 
+- Did I understand correctly "I want to be able to refresh the page without losing context"?
 - Why asking me to work with Next.js knowing that I never did before?
 - Why so few requirements regarding pure frontend work:
   - no mention of responsive behaviour
   - display a graph
-  - sketch was very simple, yet I was expected to follow it
+  - sketch was very simple
 - Why no advice on github API endpoints
-  - It took me about thrice as much time to find how to fetch the data to display than implement it
+  - It took me about three times as much time to find how to fetch the data to display than implement it
   - I didn't find as simple way to request data to display the graph
 
 
   ## Time spent
 
-  - **~10 hours** in total:
-    - 5 hours manipulating Github API to render the graph
-    - 5 hours for the rest
+  - **~10 hours** in total
+
+  ## Overall feeling
+
+  - disappointment regarding the time I invested in this test: I wasted lots of time on stuff I never used before
+    - Github API
+    - NextJs
+  - I don't feel like I had the opportunity to show my skills
