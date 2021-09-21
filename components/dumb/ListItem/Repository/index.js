@@ -78,6 +78,7 @@ const ListItemRepository = forwardRef(({
             sx={{
               opacity: selectVisible ? 1 : 0,
               pointerEvents: 'none',
+              fontWeight: 'bold',
             }}
           >
             Select
