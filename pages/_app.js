@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import theme from '../theme';
-import createEmotionCache from '../helpers/createEmotionCache';
+import theme from 'theme';
+import createEmotionCache from 'helpers/createEmotionCache';
 
-import '../styles/globals.css';
+import 'styles/globals.css';
 
 // CONSTANTS
 const clientSideEmotionCache = createEmotionCache();

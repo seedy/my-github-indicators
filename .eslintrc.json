@@ -12,7 +12,7 @@
       "node": {
         "moduleDirectory": [
           "node_modules",
-          "src"
+          "."
         ],
         "extensions": [
           ".js",

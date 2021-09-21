@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
 
 
-import { useMemo } from 'react';
+import { forwardRef, useMemo } from 'react';
 
 import TextField from '@mui/material/TextField';
-import debounce from '../../../../helpers/debounce';
+import debounce from 'helpers/debounce';
 
 // CONSTANTS
 const DEFAULT_DELAY = 300;
 
 // COMPONENTS
-const TextFieldDebounced = ({ onChange, delay, ...props }) => {
+const TextFieldDebounced = forwardRef(({ onChange, delay, ...props }, ref) => {
   const handleChange = useMemo(
     () => debounce(onChange, delay, { leading: false, trailing: true }),
     [onChange, delay],
   );
 
   return (
-    <TextField onChange={handleChange} {...props} />
+    <TextField ref={ref} onChange={handleChange} {...props} />
   );
-};
+});
 
 TextFieldDebounced.propTypes = {
   onChange: PropTypes.func.isRequired,
@@ -29,5 +29,7 @@ TextFieldDebounced.propTypes = {
 TextFieldDebounced.defaultProps = {
   delay: DEFAULT_DELAY,
 };
+
+TextFieldDebounced.displayName = 'TextFieldDebounced';
 
 export default TextFieldDebounced;

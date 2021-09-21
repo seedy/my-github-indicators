@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import Link from '../index';
+import Link from 'components/smart/Link';
 
 // COMPONENTS
 const LinkHome = forwardRef(({

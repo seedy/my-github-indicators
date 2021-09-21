@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 
 import ListItemButton from '@mui/material/ListItemButton';
-import LinkRepository from '../../../Link/Repository';
+import LinkRepository from 'components/smart/Link/Repository';
 
 // COMPONENTS
 const ListItemButtonLinkRepository = forwardRef((props, ref) => (
