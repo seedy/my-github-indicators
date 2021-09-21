@@ -54,7 +54,7 @@ const Home = ({ q, repos }) => {
   );
 
   const loading = useMemo(
-    () => !clientQueryMatchesSsr && data === repos,
+    () => !clientQueryMatchesSsr && data === repos && !isNil(clientQuery),
     [clientQueryMatchesSsr, data, repos],
   );
 
@@ -94,8 +94,7 @@ const Home = ({ q, repos }) => {
         maxWidth="100%"
       >
         <Box
-          mt={8}
-          mb={8}
+          my={8}
         >
           <Typography
             align="center"
