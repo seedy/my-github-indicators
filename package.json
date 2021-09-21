@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.0.0",
@@ -16,10 +17,13 @@
     "@nivo/line": "^0.73.0",
     "@octokit/rest": "^18.10.0",
     "eslint-config-airbnb": "^18.2.1",
+    "lodash": "^4.17.21",
     "next": "11.1.2",
     "prop-types": "^15.7.2",
+    "ramda": "^0.27.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "swr": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
