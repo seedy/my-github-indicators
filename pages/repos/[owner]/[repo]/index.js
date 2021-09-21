@@ -105,7 +105,7 @@ const OwnerRepo = ({ owner, repo, repository, memberEvents, issuesClosed }) => {
         flexGrow={1}
         width="100%"
       >
-        <Box my={8}>
+        <Box my={8} width="100%">
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <Link
             underline="hover"
@@ -123,7 +123,7 @@ const OwnerRepo = ({ owner, repo, repository, memberEvents, issuesClosed }) => {
             description={description}
             mt={2}
           />
-          <Box width={500} height={500}>
+          <Box width="100%" height={500}>
             <Graph
               openIssuesCount={openIssues}
               closedDates={closedDates}
