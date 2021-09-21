@@ -107,7 +107,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - sketch was very simple
 - Why no advice on github API endpoints
   - It took me about three times as much time to find how to fetch the data to display than implement it
-  - I didn't find as simple way to request data to display the graph
+  - I didn't find a simple way to request colllaborators' data
 
 
   ## Time spent
